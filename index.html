@@ -11,12 +11,13 @@
     <div id="root"></div>
     <script type="text/babel">
 
-      ReactDOM.render(
-        <h1>Hello, world!</h1>,
+        const App = () => <p>Всем привет, я компонент App</p>;
+
+        ReactDOM.render(
+        <App />,
         document.getElementById('root')
-      );
+        );
 
     </script>
-
   </body>
 </html>
