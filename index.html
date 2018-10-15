@@ -6,16 +6,40 @@
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <style>
+        .red {
+          color: #FF0000;
+        }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="text/babel">
 
-        const App = () => <p>Всем привет, я компонент App</p>;
+        const App = () => {
+            return <p>Всем привет, я компонент App</p>
+        }
+
+        const News = () => {
+            return <p>К сожалению, новостей нет</p>
+        }
+
+        class BigApp extends React.Component {
+            render() {
+                return (
+                <React.Fragment>
+                    <h1>Я компонент, BigApp</h1>
+                    <p className='red'>Компоненты можно вкладывать друг в друга.</p>
+                    <App />
+                    <News />
+                </React.Fragment>
+                )
+            }
+        }
 
         ReactDOM.render(
-        <App />,
-        document.getElementById('root')
+            <BigApp />,
+            document.getElementById('root')
         );
 
     </script>
