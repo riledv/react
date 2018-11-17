@@ -1,2 +1,2 @@
-# react
-react app
+# React
+Приложение для вывода новостей на React.js
